@@ -20,40 +20,35 @@ pub fn App() -> View {
     let name = create_signal(String::new());
     let greet_msg = create_signal(String::new());
 
-    let greet = move |e: SubmitEvent| {
+    let test = move |e: SubmitEvent| {
         e.prevent_default();
         spawn_local_scoped(async move {
             let args = serde_wasm_bindgen::to_value(&GreetArgs {
 				name: &name.get_clone()
 			})
 			.unwrap();
-            let new_msg = invoke("greet", args).await;
+            let new_msg = invoke("test", args).await;
             greet_msg.set(new_msg.as_string().unwrap());
         })
     };
 
     view! {
+        main(class="header") {
+            h3 {
+                "test"
+            }
+            h3 {
+                "test 2"
+            }
+        }
         main(class="container") {
             h1 {
-                "Welcome to Tauri + Sycamore"
+                "Take your first steps towards a healthier lifestyle!"
             }
 
-            div(class="row") {
-                a(href="https://tauri.app", target="_blank") {
-                    img(src="public/tauri.svg", class="logo tauri", alt="Tauri logo")
-                }
-                a(href="https://sycamore.dev", target="_blank") {
-                    img(src="public/sycamore.svg", class="logo sycamore", alt="Sycamore logo")
-                }
-            }
-            p {
-                "Click on the Tauri and Sycamore logos to learn more."
-            }
-
-            form(class="row", on:submit=greet) {
-                input(id="greet-input", bind:value=name, placeholder="Enter a name...")
+            form(class="row", on:submit=test) {
                 button(r#type="submit") {
-                    "Greet"
+                    "Start Tracking"
                 }
             }
             p {
