@@ -110,3 +110,29 @@ button {
     background-color: #0f0f0f69;
   }
 }
+
+#image {
+  padding-left: 20px;
+  width: 1%;
+  height: auto;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #BDDCA2;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #BDDCA2;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}

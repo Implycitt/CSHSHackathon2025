@@ -1,8 +1,8 @@
 [package]
 name = "cshs"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "Computer Science Honors Society 2025 hackathon submission"
+authors = ["Quentin Bordelon", "Sophia Zhu", "Cecily Lu", "Brianna Warren"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
