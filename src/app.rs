@@ -23,7 +23,6 @@ pub fn App() -> View {
     let greet = move |e: SubmitEvent| {
         e.prevent_default();
         spawn_local_scoped(async move {
-            // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
             let args = serde_wasm_bindgen::to_value(&GreetArgs {
 				name: &name.get_clone()
 			})

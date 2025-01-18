@@ -13,7 +13,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "cshs",
+        "title": "tracker",
         "width": 800,
         "height": 600
       }
